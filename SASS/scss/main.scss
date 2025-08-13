@@ -1,0 +1,397 @@
+//Para declarar variables en SASS podemos implementar al princiío igual que en CSS
+//Y se utiliza el signo $$$$
+///FIGMA: https://www.figma.com/design/Em1aDiIHmqozHpUAjsYhT7/Eco-Store-Mockups--Copy-?node-id=0-1&p=f
+$primary-color: #FFEFE7;
+$secondary-color: #FFDAC6;
+$tertiary-color: #BABD8D;
+$primary-text-color: #7C6A0A;
+$background-orange: #FA9500;    
+$font-stack: "IBM Plex Sans", sans-serif;
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: $primary-color;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: $font-stack;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav{
+    width: 1300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    color: $primary-text-color;
+    align-self: center;
+    p{
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    div{
+        box-sizing: border-box;
+        display: flex;
+        button{
+            background-color: none;
+            border: none;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.my-main{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+article{
+    color: $primary-text-color;
+    width: 1300px;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    .impact-container{
+        width: 50%;
+        height: auto;
+        font-size: 2.2rem;
+    
+        h1{
+            margin-bottom: 60px;
+            font-weight: 700;
+            font-size: 2.8rem;
+        }
+
+        p{
+            margin-bottom: 60px;
+        }
+        button{
+            width: 180px;
+            height: 40px;
+            background-color: $background-orange;
+            color: white;
+            border: none;
+            border-radius: 28px;
+            font-weight: 700;
+        }
+    }
+    .image-container{
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        img{
+            width: 320px;
+            border-radius: 12px;
+        }
+    }
+
+.product-section{
+    box-sizing: border-box;
+    width: 1300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .health-care{
+        box-sizing: border-box;
+        width: 1000px;
+        height: auto;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        color: $primary-text-color;
+        font-size: 1.6rem;
+        font-weight: 300;
+        h2{
+            font-weight: 350;
+            margin-bottom: 40px;
+        }
+        .card-container{
+            box-sizing: border-box;
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px;
+            justify-content: space-between;
+            flex-direction: row;
+            .card{
+                box-sizing: border-box;
+                width: 230px;
+                height: auto;
+                background-color: $secondary-color;
+                border-radius: 8px;
+                padding: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .svg-container{
+                    width: 100%;
+                    height: 10%;
+                    display: flex;
+                    justify-content: end;
+                    background-color: $secondary-color;
+                    margin-bottom: 12px;
+
+                    svg{
+                        background-color: transparent;
+                    }
+                }
+                .image-card-container{
+                    width: 100%;
+                    height: 80%;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    background-color: $secondary-color;
+                    margin-bottom: 12px;
+                    img{
+                        width: 180px;
+                        height: 240px;
+                        border-radius: 8px;
+                    }
+                }
+                .text-card-container{
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 20%;
+                    background-color: $secondary-color;
+                    color: $primary-text-color;
+                    margin-bottom: 30px;
+                    h3{
+                        background-color: $secondary-color;
+                        font-weight: 500;
+                        font-size: 1.4rem;
+                    }
+                    p{
+                        background-color: $secondary-color;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .furniture-section{
+    @extend .health-care;
+    .card{
+        background-color: $tertiary-color !important;
+        color: white;
+        .svg-container{
+            background-color: $tertiary-color !important;
+        }
+        .image-card-container{
+            background-color: $tertiary-color !important;
+        }
+        .text-card-container{
+            background-color: $tertiary-color !important;
+            color: white !important;
+            h3{
+                background-color: $tertiary-color !important;
+            }
+            p{
+                background-color: $tertiary-color !important;
+            }
+        }
+    }
+}
+}
+
+.info-section{
+    box-sizing: border-box;
+    width: 1200px;
+    height: auto;
+    padding: 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .about-us{
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 80px;
+        h2{
+            margin-left: 100px;
+            margin-bottom: 60px;
+            font-weight: 500;
+            font-size: 3rem;
+            color: $primary-text-color;
+            justify-self: center;
+            align-self: start;
+        }
+        .articles-container{
+            box-sizing: border-box;
+            width: 800px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            div{
+                box-sizing: border-box;
+                width: 50%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                font-weight: 500;
+                font-size: 2rem;
+                color: $background-orange;
+                img{
+                    width: 120px;
+                }
+            }
+            .innovation{
+                margin-left: 80px;
+            }
+        }
+    }
+}
+
+.gallery{
+    box-sizing: border-box;
+    width: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    h2{
+        font-weight: 500;
+        font-size: 3rem;
+        color: $primary-text-color;
+    }
+    .images-gallery{
+        box-sizing: border-box;
+        margin-top: 32px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            width: 250px;
+            height: 300px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.location{
+    box-sizing: border-box;
+    width: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 40px;
+    margin-bottom: 60px;
+    h2{
+        font-weight: 500;
+        font-size: 3rem;
+        color: $primary-text-color;
+        margin-bottom: 40px;
+    }
+    .map-container{
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        margin-bottom: 40px;
+        img{
+            width: 100%;
+            border-radius: 12px;
+        }
+    }
+    .addres-container{
+        font-weight: 200;
+        font-size: 2rem;
+        color: $background-orange;
+    }
+}
+
+footer{
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    background-color: $background-orange;
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+    font-size: 1.8rem;
+    color: white;
+    padding: 30px;
+    .footer-container{
+        box-sizing: border-box;
+        background-color: $background-orange;
+        h3{
+            background-color: $background-orange;
+            margin-bottom: 18px;
+        }
+        p{
+            background-color: $background-orange;
+            margin-bottom: 4px;
+        }
+    }
+    .social-media{
+        position: relative;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        background-color: $background-orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        margin-top: 50px;
+        img{
+            width: 30px;
+            background-color: transparent;
+        }
+    }
+}
+
+
